@@ -14,6 +14,12 @@ jobs:
           TORCHVISION_VER: 0.14.0
           TORCHAUDIO_VER: 0.13.0
           PYTORCH_EXTRA_IDX_URL: https://download.pytorch.org/whl/cu118
+        - CUDA_VER: 11.8.0
+          UBUNTU_VER: 20.04
+          TORCH_VER: 1.13.0
+          TORCHVISION_VER: 0.14.0
+          TORCHAUDIO_VER: 0.13.0
+          PYTORCH_EXTRA_IDX_URL: https://download.pytorch.org/whl/cu118
     runs-on: ubuntu-latest
     permissions:
       packages: write
