@@ -8,6 +8,12 @@ jobs:
     strategy:
       matrix:
         include:
+        - CUDA_VER: 13.1.0
+          UBUNTU_VER: 24.04
+          TORCH_VER: 2.9.1
+          TORCHVISION_VER: 0.24.1
+          TORCHAUDIO_VER: 2.9.1
+          PYTORCH_EXTRA_IDX_URL: https://download.pytorch.org/whl/cu130
         - CUDA_VER: 11.8.0
           UBUNTU_VER: 22.04
           TORCH_VER: 2.6.0
