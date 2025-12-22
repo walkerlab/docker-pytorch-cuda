@@ -11,6 +11,6 @@ ARG PYTORCH_EXTRA_IDX_URL
 LABEL maintainer="Edgar Y. Walker <eywalker@uw.edu>, Daniel Sitonic <sitonic@uw.edu>"
 
 # Install PyTorch
-RUN pip3 --no-cache-dir install torch==$TORCH_VER torchvision==$TORCHVISION_VER torchaudio==$TORCHAUDIO_VER $([ -z "$PYTORCH_EXTRA_IDX_URL" ] && echo "" || echo "--extra-index-url $PYTORCH_EXTRA_IDX_URL")
+RUN uv pip install -p /venv  torch==$TORCH_VER torchvision==$TORCHVISION_VER torchaudio==$TORCHAUDIO_VER $([ -z "$PYTORCH_EXTRA_IDX_URL" ] && echo "" || echo "--extra-index-url $PYTORCH_EXTRA_IDX_URL")
 
 WORKDIR /src
